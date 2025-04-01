@@ -28,6 +28,11 @@ public class AlgaeIntakeSubsystem extends SubsystemBase {
     fx_cfg.SoftwareLimitSwitch.ForwardSoftLimitThreshold = 152.0;
     fx_cfg.SoftwareLimitSwitch.ReverseSoftLimitThreshold = 0;
 
+    fx_cfg.CurrentLimits.StatorCurrentLimit = 27;//27
+    fx_cfg.CurrentLimits.StatorCurrentLimitEnable = false;
+    fx_cfg.CurrentLimits.SupplyCurrentLimit = 27;
+    fx_cfg.CurrentLimits.SupplyCurrentLimitEnable = false;
+
     motor1.getConfigurator().apply(fx_cfg, 0.050);
 
 
@@ -41,11 +46,11 @@ public class AlgaeIntakeSubsystem extends SubsystemBase {
     }
 
    public void intake(){
-    motor1.set(0.15);
+    motor1.set(0.3);//.15
   }
 
   public void outtake(){
-    motor1.set(-0.15);
+    motor1.set(-0.5);
   }
 
   public void set(Double Speed) {

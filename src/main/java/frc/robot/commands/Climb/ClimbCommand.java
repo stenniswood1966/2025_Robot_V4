@@ -30,7 +30,7 @@ public class ClimbCommand extends Command {
     //turn the winch on with mm
     //pray
 
-    System.out.println(RobotContainer.algaerotatesubsystem.getPosition());
+    //System.out.println(RobotContainer.algaerotatesubsystem.getPosition());
     if (RobotContainer.winchsubsystem.getRotorPosition() > constants.k_WinchClimbHandoff){
       RobotContainer.algaerotatesubsystem.stop();      
     }

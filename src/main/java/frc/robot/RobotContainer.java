@@ -220,8 +220,8 @@ public class RobotContainer {
         joystick.rightTrigger().whileTrue(new OuttakeCommand());
 
          
-        joystick.leftTrigger().whileTrue(new AlgaeRotateSetPositionCommand(constants.k_AlgaeRotateMMPickup)
-            .alongWith(new AlgaeIntakeIntakeCommand())).onFalse(new AlgaeRotateSetPositionCommand(constants.k_AlgaeRotateMMHome));
+        //joystick.leftTrigger().whileTrue(new AlgaeRotateSetPositionCommand(constants.k_AlgaeRotateMMPickup)
+           // .alongWith(new AlgaeIntakeIntakeCommand())).onFalse(new AlgaeRotateSetPositionCommand(constants.k_AlgaeRotateMMHome));
         joystick.x().whileTrue(new AlgaeIntakeOuttakeCommand());
         
 
@@ -274,10 +274,15 @@ public class RobotContainer {
         Button_13.whileTrue(new IntakeCommand()); //intake
         Button_14.whileTrue(new OuttakeCommand()); //outtake
 
+        Button_15.whileTrue(new SetShoulderElevatorPosition(constants.k_ShoulderMMHomeLow, constants.k_ElevatorMMHomeLow)
+            .andThen(new ShoulderElevatorCommand())
+            .alongWith(new AlgaeRotateSetPositionCommand(constants.k_AlgaeRotateMMPickup))
+            .alongWith(new AlgaeIntakeIntakeCommand())).onFalse(new AlgaeRotateSetPositionCommand(constants.k_AlgaeRotateMMHome));
+
     //test bindings for the second controller
-    joystick2.a().whileTrue(new WinchManualCommand());
+    
         /* 
-        
+        joystick2.a().whileTrue(new WinchManualCommand());
         joystick2.b().whileTrue(new AlgaeIntakeManualCommand());
         joystick2.x().whileTrue(new AlgaeRotateManualCommand());
         */
