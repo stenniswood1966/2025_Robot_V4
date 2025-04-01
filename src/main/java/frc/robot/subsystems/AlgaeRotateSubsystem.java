@@ -108,13 +108,13 @@ public class AlgaeRotateSubsystem extends SubsystemBase {
 
     /* Configure current limits */
     MotionMagicConfigs mm = new MotionMagicConfigs(); //creates a default motion magic congiguration
-    mm.MotionMagicCruiseVelocity = 150; // RotorVelocity per second
+    mm.MotionMagicCruiseVelocity = 150; // RotorVelocity per second 
     mm.MotionMagicAcceleration = 150; // Take approximately 0.5 seconds to reach max vel Take approximately 0.2 seconds to reach max accel
     mm.MotionMagicJerk = 1000; //smooths out the transition from start/stop to cruise velocity
     fx_cfg.MotionMagic = mm;
 
     Slot0Configs slot0 = new Slot0Configs();
-    slot0.kP = 50; //output per unit of error in velocity (output/rps)
+    slot0.kP = 40; //output per unit of error in velocity (output/rps) 50-old
     slot0.kI = 0.0; //output per unit of integrated error in velocity (output/rotation)
     slot0.kD = 0.0; //output per unit of error derivative in velocity (output/(rps/s))
     slot0.kA = 0.0; // An acceleration of 1 rps/s requires 0.01 V output
