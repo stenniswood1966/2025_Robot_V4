@@ -173,16 +173,16 @@ public class RobotContainer {
         //));
 
         joystick.pov(0).whileTrue(drivetrain.applyRequest(() ->
-            forwardStraight.withVelocityX(0.5).withVelocityY(0))
+            forwardStraight.withVelocityX(0.2).withVelocityY(0))
         );
         joystick.pov(90).whileTrue(drivetrain.applyRequest(() ->
-            forwardStraight.withVelocityX(0).withVelocityY(-.5))
+            forwardStraight.withVelocityX(0).withVelocityY(-.2))
         );
         joystick.pov(180).whileTrue(drivetrain.applyRequest(() ->
-            forwardStraight.withVelocityX(-0.5).withVelocityY(0))
+            forwardStraight.withVelocityX(-0.2).withVelocityY(0))
         );
         joystick.pov(270).whileTrue(drivetrain.applyRequest(() ->
-            forwardStraight.withVelocityX(0).withVelocityY(.5))
+            forwardStraight.withVelocityX(0).withVelocityY(.2))
         );
 
         // Run SysId routines when holding back/start and X/Y.

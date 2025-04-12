@@ -81,5 +81,5 @@ public class constants {
     
     public static double k_WinchClimbPower = .25;
 
-    public static double k_WinchClimbPosition = 1.6;
+    public static double k_WinchClimbPosition = 1;//1.6
 }
