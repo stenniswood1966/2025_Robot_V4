@@ -79,7 +79,7 @@ public class constants {
 
     public static double k_WinchClimbHandoff = 50;
     
-    public static double k_WinchClimbPower = .25;
+    public static double k_WinchClimbPower = .4;
 
-    public static double k_WinchClimbPosition = 1;//1.6
+    public static double k_WinchClimbPosition = 1.3;//1.6
 }

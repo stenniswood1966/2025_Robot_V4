@@ -224,7 +224,7 @@ public class RobotContainer {
            // .alongWith(new AlgaeIntakeIntakeCommand())).onFalse(new AlgaeRotateSetPositionCommand(constants.k_AlgaeRotateMMHome));
         joystick.x().whileTrue(new AlgaeIntakeOuttakeCommand());
         
-
+        
     //assigning the  operator controls
 
         
@@ -338,6 +338,7 @@ public class RobotContainer {
             .alongWith(new AutoAlignCommand(drivetrain).repeatedly()).withTimeout(2.5));// tune me timeout
         NamedCommands.registerCommand("PreSeed AutoAlign", new AutoAlignCommand(drivetrain));
         NamedCommands.registerCommand("Set LL Pipeline", new ChangePiplineCommand(0));
+        NamedCommands.registerCommand("Set LL Pipeline Right", new ChangePiplineCommand(1));
     }
 
     public Command getAutonomousCommand() {
